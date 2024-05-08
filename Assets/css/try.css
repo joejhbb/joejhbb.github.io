@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&family=New+Rocker&family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e3f2fd;
+}
+
+.container{
+  position: relative;
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 28px;
+  max-width: 380px;
+  width: 100%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo img{
+  width: 48px;
+}
+
+header .chip{
+  width: 60px;
+}
