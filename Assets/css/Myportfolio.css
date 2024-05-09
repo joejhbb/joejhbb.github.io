@@ -120,6 +120,10 @@
     
   }
 
+  .menu-btn i.active::before{
+    content: "\f00d";
+  }
+
   .navbar .menu{
     position: fixed;
     height: 100vh;
