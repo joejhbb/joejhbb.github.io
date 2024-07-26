@@ -195,9 +195,8 @@ html{
     display: block;
     z-index: 999;
   }
-  .menu-btn i.active:before{
-    content: "\f00d";
-    
+  .menu-btn i.active:before {
+    content: "/f00d";
   }
   .navbar .menu{
       position: fixed;
