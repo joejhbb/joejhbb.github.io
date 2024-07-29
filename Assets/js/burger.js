@@ -30,7 +30,13 @@ navLink.forEach(n => n.addEventListener('click', LinkAction))
 
 
 /*=============== ADD SHADOW HEADER ===============*/
-
+const scrollHeader = () =>{
+  constheader = document.getElementById('header')
+  // add a class if the bottom offset is greater than 50 of the viewport
+  this.scrollY >= 50 ? Headers.classList.add('shadow-header')
+  : Headers.classList.remove('shadow-header')
+}
+window.addEventListener('scroll', shadowHeader)
 
 /*=============== SHOW SCROLL UP ===============*/ 
 
