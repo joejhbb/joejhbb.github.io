@@ -643,30 +643,28 @@ bottom: -1.5rem;
  } 
 
 /*=============== SCROLL UP ===============*/
-.scroll-up-btn {
+.scrollup{
   position: fixed;
-  right: 2rem;
-  bottom: 3rem; /* Adjusted to -5rem to keep it closer to the visible area */
-  background-color: var(--body-color);
-  box-shadow: 0 4px 16px hsla(22, 100%, 8%, .2);
+  right: 1rem;
+  bottom: 3rem;
+  background-color: var(--container-color);
   color: var(--title-color);
+  box-shadow: 0 12px 24px hsla(228, 48%, 4%, .5);
   display: inline-flex;
   padding: 6px;
   font-size: 1.25rem;
-  border-radius: .35rem;
   z-index: var(--z-tooltip);
   transition: bottom .4s, transform .4s;
+  opacity: 1;
 }
 
-.scroll-up-btn.show-scroll {
-  bottom: 3rem; /* This will move the button to 3rem from the bottom when the class is added */
-}
-
-.scroll-up-btn:hover {
+.scrollup:hover{
   transform: translateY(-.5rem);
 }
 
-
+.show-scroll{
+  opacity: 0;
+}
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
 

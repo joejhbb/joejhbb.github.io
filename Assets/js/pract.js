@@ -38,24 +38,14 @@ const scrollHeader = () =>{
 }
 window.addEventListener('scroll', shadowHeader)
 
- /*=============== SHOW SCROLL UP ===============*/
-
- window.onscroll = function() {scrollFunction()};
-
- function scrollFunction() {
-   const scrollUp
-   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-     mybutton.style.display = "block";
-   } else {
-     mybutton.style.display = "none";
-   }
- }
- 
- function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
+/*=============== SHOW SCROLL UP ===============*/ 
+const scrollUp = () =>{
+	const scrollUp = document.getElementById('scroll-up')
+    // When the scroll is higher than 350 viewport height, add the show-scroll class to the a tag with the scrollup class
+	this.scrollY >= 350 ? scrollUp.classList.add('show-scroll')
+						: scrollUp.classList.remove('show-scroll')
 }
-
+window.addEventListener('scroll', scrollUp)
 // $(document).ready(function(){
 //   $(window).scroll(function(){
 //     // Show/hide the scroll-up button based on scroll position
