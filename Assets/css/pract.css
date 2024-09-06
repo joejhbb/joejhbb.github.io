@@ -643,28 +643,35 @@ bottom: -1.5rem;
  } 
 
 /*=============== SCROLL UP ===============*/
-.scrollup{
+.scroll-up-btn {
   position: fixed;
+  height: 45px;
+  width: 42px;
+  background: #FF0157;
   right: 1rem;
-  bottom: 3rem;
-  background-color: var(--container-color);
-  color: var(--title-color);
-  box-shadow: 0 12px 24px hsla(228, 48%, 4%, .5);
-  display: inline-flex;
-  padding: 6px;
-  font-size: 1.25rem;
-  z-index: var(--z-tooltip);
-  transition: bottom .4s, transform .4s;
-  opacity: 1;
-}
-
-.scrollup:hover{
-  transform: translateY(-.5rem);
-}
-
-.show-scroll{
+  bottom: 30px;
+  text-align: center;
+  line-height: 45px;
+  color: #fff;
+  z-index: 1000;
+  font-size: 2.3rem;
+  border-radius: 6px;
+  cursor: pointer;
   opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
 }
+
+.scroll-up-btn.show {
+  bottom: 30px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.scroll-up-btn:hover {
+  filter: brightness(90%);
+}
+
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
 
