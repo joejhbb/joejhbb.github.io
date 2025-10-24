@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&family=New+Rocker&family=Poppins:wght@300;400;500;600&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #ffe1ec, #e0c3fc, #c2f0fc);
+  overflow: hidden;
+}
+
+
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 370px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 24px;
+  padding: 25px;
+  box-shadow: 0 8px 25px rgba(255, 182, 193, 0.3);
+  position: relative;
+  transition: all 0.3s ease;
+  animation: float 4s ease-in-out infinite;
+  overflow: hidden;
+}
+
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+
+.profile-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 30px rgba(255, 182, 193, 0.5);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+
+
+
+
+.profile-card::before {
+  content: "✨";
+  position: absolute;
+  font-size: 24px;
+  color: #ffbdf0;
+  top: 10px;
+  right: 25px;
+  animation: sparkle 3s ease-in-out infinite;
+  z-index: 4;
+}
+
+@keyframes sparkle {
+  0%, 100% { opacity: 0.4; transform: scale(1) rotate(0deg); }
+  50% { opacity: 1; transform: scale(1.2) rotate(20deg); }
+}
+
+.image {
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  padding: 3px;
+  margin-bottom: 10px;
+  background: linear-gradient(135deg, #ffb6c1, #c084fc, #93c5fd);
+  background-size: 300% 300%;
+  animation: glowBorder 6s ease infinite;
+  z-index: 5;
+}
+
+
+.image::before {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 192, 203, 0.7), rgba(192, 132, 252, 0.2), transparent 70%);
+  z-index: -1;
+  filter: blur(10px);
+  opacity: 0.8;
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.1); opacity: 1; }
+}
+
+@keyframes glowBorder {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+.image .profile-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 4px 15px rgba(255, 192, 203, 0.4);
+}
+
+
+.text-data {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #333;
+  position: relative;
+  z-index: 2;
+}
+
+.text-data .name {
+  font-size: 22px;
+  font-weight: 700;
+  color: #7b2cbf;
+}
+
+.text-data .student {
+  font-size: 14px;
+  color: #b56576;
+}
+
+
+.media-buttons {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.media-buttons .link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 18px;
+  height: 34px;
+  width: 34px;
+  border-radius: 50%;
+  margin: 0 8px;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.media-buttons .link:hover {
+  transform: scale(1.15) rotate(5deg);
+  box-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+}
+
+
+.buttons {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.buttons .button {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  border-radius: 24px;
+  margin: 0 10px;
+  padding: 8px 24px;
+  background: linear-gradient(135deg, #f9a8d4, #c084fc);
+  background-size: 200% 200%;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.buttons .button:hover {
+  background-position: right center;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(192, 132, 252, 0.5);
+}
+
+
+.analytics {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.analytics .data {
+  display: flex;
+  align-items: center;
+  color: #333;
+  padding: 0 20px;
+  border-right: 2px solid #e7e7e7;
+  transition: transform 0.3s ease;
+}
+
+.analytics .data:hover {
+  transform: scale(1.1);
+}
+
+.data i {
+  font-size: 18px;
+  margin-right: 6px;
+  color: #e75480;
+}
+
+.data:last-child {
+  border-right: none;
+}
